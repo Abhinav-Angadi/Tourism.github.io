@@ -38,7 +38,7 @@ I am passionate about technology and problem-solving. Here's a glimpse of my wor
 - Data Structures and Algorithms
 
 ## 🌐 Find Me Online
-- [GitHub](https://github.com/Vaibhav-Thabbannavar)
+- [GitHub](https://github.com/Abhinav-Angadi)
 
 
 ## Portfolio Topic
