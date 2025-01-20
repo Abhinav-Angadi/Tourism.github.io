@@ -1,43 +1,56 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+site:
+  name: "Abhinav's Portfolio"
+  description: "A dedicated tech enthusiast & creative problem-solver"
+  author: "Abhinav Angadi"
+  year: 2025
+  university: "KLE Technological University"
+  course:
+    name: "Tourism Management System"
+    code: "24ECSC206"
+  srn: "02FE23BCS068"
 
-on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
+header:
+  profile_photo: "your-photo.jpg"
+  tagline: "Hello, I'm Abhinav👋"
+  subtagline: "A dedicated tech enthusiast & creative problem-solver"
+  nav_links:
+    - name: "Description"
+      href: "desc.html"
+    - name: "Accommodation Management"
+      href: "Accomodation.html"
+    - name: "Food & Dining"
+      href: "Food.html"
+    - name: "Transportation"
+      href: "Transport.html"
+    - name: "Schedule & Expense Tracking"
+      href: "Schedule.html"
+    - name: "Code"
+      href: "Program.html"
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+main_content:
+  academic_details:
+    - title: "Course Name"
+      value: "Tourism Management System"
+    - title: "Course Code"
+      value: "24ECSC206"
+    - title: "Name"
+      value: "Abhinav Angadi"
+    - title: "SRN"
+      value: "02FE23BCS068"
+    - title: "University"
+      value: "KLE Technological University"
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+  quote: "Success is not the key to happiness. Happiness is the key to success. – Albert Schweitzer"
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  projects:
+    - name: "Tourism Management System"
 
-jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload entire repository
-          path: '.'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+  skills:
+    - "Programming Languages: C++, Python, C"
+    - "Core Concepts: Data Structures and Algorithms"
+
+footer:
+  copyright: "&copy; 2025 Abhinav Angadi"
+  contact_link: "#contact"
+
+
