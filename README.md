@@ -1,7 +1,5 @@
-# floodmgmtsystem.github.io
+# Tourism.github.io
 # Welcome to My Project
-
-![Tourism Management System Project ]
 
 Tourism Management System Project
 Project: Tourism Monitoring and Management System
