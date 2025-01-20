@@ -1,7 +1,7 @@
 # Tourism.github.io
 # Welcome to My Project
 
-Tourism Management System Project
+
 Project: Tourism Monitoring and Management System
 
 **1st Module: Accommodation Management**  
