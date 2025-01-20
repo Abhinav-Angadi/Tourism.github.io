@@ -1,153 +1,232 @@
+Here's your personalized portfolio HTML template:  
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhinav Angadi - Portfolio</title>
+    <title>Abhinav's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* General Styles */
-        body {
-            font-family: Arial, sans-serif;
+        /* General Reset */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f5f5;
             color: #333;
+            line-height: 1.6;
         }
-
+        /* Header Section */
         header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 20px 10px;
+            background: linear-gradient(135deg, #00796b, #004d40);
+            color: #fff;
             text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            padding: 50px 20px;
+            position: relative;
         }
-
         header h1 {
-            margin: 0;
-            font-size: 2.5em;
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2rem;
+        }
+        header .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            margin: 20px auto;
+            display: block;
+            object-fit: cover;
         }
 
+        /* Hamburger Menu Styles */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .hamburger div {
+            width: 30px;
+            height: 4px;
+            background-color: #fff;
+            margin: 4px 0;
+            transition: all 0.3s ease;
+        }
+
+        /* Navigation Menu */
         nav {
-            background-color: #333;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            background: #00796b;
             padding: 10px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
         }
-
         nav a {
-            color: white;
+            color: #fff;
             text-decoration: none;
             margin: 0 15px;
-            padding: 8px 15px;
-            display: inline-block;
+            padding: 10px 20px;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: background 0.3s ease;
         }
-
         nav a:hover {
-            background-color: #4CAF50;
+            background: #004d40;
             border-radius: 5px;
         }
 
-        section {
-            padding: 50px 20px;
-            width: 90%;
-            margin: auto;
-            margin-bottom: 30px;
-            background: white;
+        /* Responsive Navigation */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            nav {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                background: #00796b;
+                position: absolute;
+                top: 70px;
+                right: 10px;
+                width: 200px;
+                border-radius: 8px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            }
+            nav.active {
+                display: flex;
+            }
+            nav a {
+                margin: 10px 0;
+            }
+        }
+
+        /* Main Content Styling */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #fff;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
-
-        section h2 {
-            color: #4CAF50;
-            font-size: 1.8em;
-            margin-bottom: 15px;
+        h2 {
+            color: #00796b;
+            border-bottom: 2px solid #00796b;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
         }
-
-        footer {
-            text-align: center;
-            padding: 15px 0;
-            background-color: #4CAF50;
-            color: white;
-            position: relative;
-        }
-
         ul {
             list-style: none;
             padding: 0;
         }
-
         ul li {
-            margin: 10px 0;
+            margin-bottom: 10px;
+            font-size: 1rem;
         }
-
-        a {
-            color: #4CAF50;
-            text-decoration: none;
+        ul li strong {
+            color: #004d40;
+        }
+        dl dt {
             font-weight: bold;
+            color: #333;
+            margin-top: 10px;
         }
-
-        a:hover {
-            text-decoration: underline;
+        dl dd {
+            margin-left: 20px;
+            margin-bottom: 10px;
+            color: #555;
         }
-
-        .icon {
-            margin-right: 10px;
+        blockquote {
+            font-style: italic;
+            margin: 20px 0;
+            padding: 20px;
+            background: #f1f1f1;
+            border-left: 4px solid #00796b;
+            color: #444;
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
+    <header>
+        <!-- Profile Photo -->
+        <img src="your-photo.jpg" alt="Profile Photo" class="profile-photo">
+        <h1>Hello, I'm Abhinav👋</h1>
+        <p>A dedicated tech enthusiast & creative problem-solver</p>
 
-<header>
-    <h1>Abhinav Angadi</h1>
-</header>
+        <!-- Hamburger Menu -->
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
 
-<nav>
-    <a href="#about">About Me</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-</nav>
+        <!-- Navigation Menu -->
+        <nav id="nav-menu">
+            <a href="desc.html">Description</a>
+            <a href="Accomodation.html">Accommodation Management</a>
+            <a href="Food.html">Food & Dining</a>
+            <a href="Transport.html">Transportation</a>
+            <a href="Schedule.html">Schedule & Expense Tracking</a>
+            <a href="Program.html">Code</a>
+        </nav>
+    </header>
 
-<section id="about">
-    <h2>About Me</h2>
-    <p>
-        Hi! I am a student pursuing a BTech in Computer Science from KLETECH University, Belagavi. 
-        My SRN is <strong>02FE23BCS064</strong>. This portfolio showcases my 3rd semester project under the guidance of 
-        <strong>Vaishali Parab Ma'am</strong>, the course instructor for Design and Analysis of Algorithms.
-    </p>
-</section>
+    <!-- Main Content -->
+    <div class="container">
+        <h2>Academic Details</h2>
+        <dl>
+            <dt>Course Name</dt>
+            <dd>Tourism Management System</dd>
+            <dt>Course Code</dt>
+            <dd>24ECSC206</dd>
+            <dt>Name</dt>
+            <dd>Abhinav Angadi</dd>
+            <dt>SRN</dt>
+            <dd>02FE23BCS068</dd>
+            <dt>University</dt>
+            <dd>KLE Technological University</dd>
+        </dl>
+        <blockquote>“Success is not the key to happiness. Happiness is the key to success.” – Albert Schweitzer</blockquote>
 
-<section id="projects">
-    <h2>Projects</h2>
-    <ul>
-        <li><strong>Tourism Management System:</strong> Built a smart train transportation application that utilizes advanced algorithms and data structures. The project offers booking and navigation features for both user and admin purposes.</li>
-        <li><strong>Portfolio Website:</strong> Developed a responsive personal portfolio using HTML, CSS</li>
-    </ul>
-</section>
+        <!-- Project Section -->
+        <h2>Projects</h2>
+        <ul>
+            <li><strong>Tourism Management System</strong></li>
+        </ul>
 
-<section id="skills">
-    <h2>Skills</h2>
-    <ul>
-        <li>Specialties: Data Structures and Algorithms, Web Development</li>
-    </ul>
-</section>
+        <!-- Skills Section -->
+        <h2>Skills</h2>
+        <ul>
+            <li>Programming Languages: C++, Python, C</li>
+            <li>Core Concepts: Data Structures and Algorithms</li>
+        </ul>
+    </div>
 
-<section id="contact">
-    <h2>Contact</h2>
-    <ul>
-        <li>Email: <a href="mailto:abhinavangadi26@gmail.com">abhinavangadi26@gmail.com</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/abhishek-t-a29087308?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a></li>
-        <li>GitHub: <a href="https://github.com/abhishek55555-lang/portfolio.github.io" target="_blank">GitHub</a></li>
-    </ul>
-</section>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Abhinav Angadi | <a href="#contact">Contact Me</a></p>
+    </footer>
 
-<footer>
-    <p>&copy; 2025 Abhinav Angadi. All Rights Reserved.</p>
-</footer>
+    <script>
+        // JavaScript for Hamburger Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
 
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
+```
